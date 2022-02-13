@@ -1,0 +1,42 @@
+name: 'Build and Deploy resume'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    name: 'Build and Deploy'
+    runs-on: "ubuntu-latest"
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    # Checkout the repository to the GitHub Actions runner
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 # v2 is the latest version
+
+      - name: Compile latex
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: |
+            resume.tex
+
+      - name: Prepare for deployment
+        id: deploy_prep
+        run: |
+          mkdir to_deploy;
+          cp resume.pdf to_deploy/resume.pdf;
+
+      - name: Deploy reusme
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: deployments
+          build_dir: to_deploy
+          commit_message: "Deploy to dev branch"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
