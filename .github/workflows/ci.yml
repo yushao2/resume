@@ -23,8 +23,8 @@ jobs:
       - name: Compile latex
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: |
-            resume.tex
+          latexmk_use_lualatex: true
+          root_file: resume.tex
 
       - name: Prepare for deployment
         id: deploy_prep
