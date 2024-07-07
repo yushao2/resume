@@ -589,6 +589,7 @@
 % Define an environment for cventry
 \newenvironment{cventries}{%
   \vspace{\acvSectionContentTopSkip}
+  \vspace{-3mm}
   \begin{center}
 }{%
   \end{center}
