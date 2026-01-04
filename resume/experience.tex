@@ -3,7 +3,6 @@
 %-------------------------------------------------------------------------------
 \cvsection{Work Experience}
 
-
 %-------------------------------------------------------------------------------
 %	CONTENT
 %-------------------------------------------------------------------------------
@@ -11,124 +10,65 @@
 
 %---------------------------------------------------------
   \cventry
-    {Systems Specialist - Platform Application Services (Schedulers and Orchestrators)} % Job title
-    {Squarepoint Capital} % Organization
-    {Singapore} % Location
-    {Mar. 2025 - Present} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Implemented abstractions on ArgoCD to simplify self-service application delivery onto Kubernetes clusters}
-        \item {Investigate and resolve performance issues with various components of the cluster (e.g. Kyverno, etcd)}
-      \end{cvitems}
-    }
-
-  \cventry
-    {Systems Specialist - Platform Application Services (Developer Tools / Platforms)} % Job title
-    {}
-    {}
-    {Feb. 2023 - Mar. 2025} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Led a major migration of On-Prem GitLab Infrastructure from CentOS 7 (Configured using Chef) to Rocky 9 (Configured using Ansible)}
-        \item {Adapted open-source GitLab Ansible collection for use within on-prem context by adding features / customizations}
-        \item {Contributed to GitLab open-source repos to add missing features / fixes}
-        \item {Developed in-house Terraform providers to manage various platforms that supports RESTful API-based CRUD operations (Golang)}
-        \item {Provided Application Support for Critical Systems on rotational-shift basis - Troubleshooting, Incident Management, Root Cause Analysis / Remedial Actions, Maintain Runbooks, etc.}
-        \item {Manage cloud infra (AWS/GCP) using Terraform}
-        \item {Developed / Maintained alerts and metric dashboards for services (Prometheus/Grafana)}
-      \end{cvitems}
-    }
-
-  \cventry
-    {Software Developer (DevOps)} % Job title
-    {} % Organization
-    {} % Location
-    {Aug. 2022 - Feb. 2023} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Config Management for on-prem services with Chef}
-        \item {Maintained / Implemented CICD pipelines+libraries+templates (Gitlab CI/ Bamboo)}
-        \item {Developed server-side git hook dispatcher for hosted Gitlab (Python)}
-        \item {Led a major refactoring effort in all terraform repos to keep code DRY and reduce maintainence overhead (Terraform)}
-        \item {Enforced various IT security requirements for Cloud by creating reusable, compliant Terraform modules (Terraform)}
-      \end{cvitems}
-    }
-
-  \cventry
-    {Associate DevOps Engineer} % Job title
-    {GovTech Singapore} % Organization
-    {Singapore} % Location
-    {Jun. 2021 - Aug. 2022} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Deployed Infrastructure to public cloud (AWS) with IaC tools. (aws/terraform/terragrunt)}
-        \item {Implemented multiple process improvements / automation using CI/CD. (GitHub Actions/CodeFresh/python/bash)}
-        \item {Contributed to various Front-End engineering tasks for UI improvements and bug fixes. (react/javascript/css/html)}
-      \end{cvitems}
-    }
-
-  % \cventry
-  %   {Summer Technology Analyst - Global Markets Operations Technology} % Job title
-  %   {Bank of America} % Organization
-  %   {Singapore} % Location
-  %   {Jun. 2020 - Aug. 2020} % Date(s)
-  %   {
-  %     \begin{cvitems} % Description(s) of tasks/responsibilities
-  %       \item {Contributed to a development of a mock system to simulate an external system that our application interface with, reducing cost and increasing testability of said system.}
-  %     \end{cvitems}
-  %   }
-
-  % \cventry
-  %   {Industrial Attachment Technology Analyst - Equities Technologies} % Job title
-  %   {} % Organization
-  %   {} % Location
-  %   {Jan. 2020 - May. 2020} % Date(s)
-  %   {
-  %     \begin{cvitems} % Description(s) of tasks/responsibilities
-  %       \item {Migrated internal applications from an in-house deployment platform to the open-source Ansible for deployments.}
-  %       \item {Built fully automated CI/CD pipelines on TeamCity for deploying applications automatically upon changes made by developers to the application's source code.}
-  %     \end{cvitems}
-  %   }
-
+    {Systems Specialist -- Platform Application Services (Schedulers \& Orchestrators)}
+    {Squarepoint Capital}
+    {Singapore}
+    {Mar. 2025 -- Present}
+    \begin{cvitems}
+      \item {Owned and evolved an existing Kubernetes-based self-service application delivery platform built on ArgoCD, focusing on improving scalability, reliability, and day-2 operations.}
+      \item {Identified and resolved performance bottlenecks in Kubernetes control-plane and policy components (e.g. etcd, Kyverno), improving cluster stability and deployment reliability under production workloads.}
+      \item {Led application migrations from legacy Kubernetes clusters to a newer platform, adapting workloads to updated deployment models and platform standards while ensuring smooth cutover with minimal disruption.}
+      \item {Enabled adoption of improved secrets management via Vault-backed integrations by coordinating access provisioning, validating permissions, and guiding teams on secure secret consumption and ongoing operations.}
+      \item {Designed and deployed an internal AI application frontend using OpenWebUI, replacing a legacy UI and integrating securely with an existing model-serving backend via Keycloak OIDC.}
+      \item {Worked with IT security and senior stakeholders to address data governance and egress concerns associated with open-source frameworks, and to validate usability and adoption prior to rollout.}
+    \end{cvitems}
 
 %---------------------------------------------------------
-  % \cventry
-  %   {Data Analytics Intern - Regional Business Intelligence} % Job title
-  %   {Shopee} % Organization
-  %   {Singapore} % Location
-  %   {Aug. 2019 - Dec. 2019} % Date(s)
-  %   {
-  %     \begin{cvitems} % Description(s) of tasks/responsibilities
-  %       \item {Maintained over 20 scripts that are in production for generating key reports for various stakeholders in the company.}
-  %       \item {Led Version Control Software (git) training and material preparation for Regional Business Intelligence department.}
-  %     \end{cvitems}
-  %   }
+  \cventry
+    {Systems Specialist -- Platform Application Services (Developer Tools / Platforms)}
+    {Squarepoint Capital}
+    {Singapore}
+    {Feb. 2023 -- Mar. 2025}
+    {
+      \begin{cvitems}
+        \item {Led a full lifecycle migration of a business-critical on-prem GitLab platform from CentOS 7 to Rocky Linux 9, including OS hardening, configuration management redesign (Chef $\rightarrow$ Ansible), and low-risk cutover planning.}
+        \item {Extended and adapted open-source GitLab Ansible collections for enterprise on-prem use cases, contributing missing features and fixes back to upstream repositories.}
+        \item {Designed and implemented custom Terraform providers in Go to manage internal platforms via REST APIs, enabling consistent and auditable infrastructure provisioning through Infrastructure-as-Code.}
+        \item {Managed hybrid cloud infrastructure across AWS and GCP using Terraform, supporting both shared platform services and application workloads.}
+        \item {Built and maintained observability for core services using Prometheus and Grafana, improving detection and diagnosis of production issues.}
+        \item {Participated in on-call rotations for critical infrastructure services, handling incident response, root cause analysis, and long-term remediation through automation and platform improvements.}
+      \end{cvitems}
+    }
 
 %---------------------------------------------------------
-  % \cventry
-  %   {Research Development Intern - Cyber Security} % Job title
-  %   {Acronis} % Organization
-  %   {Singapore} % Location
-  %   {May. 2019 - Aug. 2019} % Date(s)
-  %   {
-  %     \begin{cvitems} % Description(s) of tasks/responsibilities
-  %       \item {Implemented over 30 automated test cases using Python’s pytest framework to ensure the resiliency of the company’s products.}
-  %       \item {Maintained Jenkins CI pipelines to automate the triggering for the automated test cases for testing the company’s product as soon as a new build is available to detect bugs at the earliest opportunity.}
-  %     \end{cvitems}
-  %   }
+  \cventry
+    {Software Developer (DevOps)}
+    {Squarepoint Capital}
+    {Singapore}
+    {Aug. 2022 -- Feb. 2023}
+    {
+      \begin{cvitems}
+        \item {Maintained and enhanced CI/CD pipelines, shared libraries, and templates across GitLab CI and Bamboo to standardize build and deployment workflows.}
+        \item {Developed internal tooling, including a server-side Git hook dispatcher for hosted GitLab (Python), to enforce workflow and security requirements.}
+        \item {Led a large-scale refactoring of Terraform repositories to reduce duplication, improve maintainability, and enforce consistent module patterns.}
+        \item {Implemented reusable and compliant Terraform modules to enforce cloud security and governance requirements across teams.}
+        \item {Managed and automated on-prem services using Chef as part of broader infrastructure automation efforts.}
+      \end{cvitems}
+    }
 
 %---------------------------------------------------------
-  % \cventry
-  %   {Software Engineering Summer Intern - Global eCommerce Solutions} % Job title
-  %   {Pitney Bowes} % Organization
-  %   {Tokyo, Japan} % Location
-  %   {Jun. 2018 - Aug. 2018} % Date(s)
-  %   {
-  %     \begin{cvitems} % Description(s) of tasks/responsibilities
-  %       \item {Spearheaded a project to automate data collection and report generation using Python; improved efficiency by over 40 times.}
-  %       \item {Laid out and maintained documentation of the project for future development.}
-  %     \end{cvitems}
-  %   }
+  \cventry
+    {Associate DevOps Engineer}
+    {GovTech Singapore}
+    {Singapore}
+    {Jun. 2021 -- Aug. 2022}
+    {
+      \begin{cvitems}
+        \item {Deployed and managed cloud infrastructure on AWS using Infrastructure-as-Code tools including Terraform and Terragrunt.}
+        \item {Implemented CI/CD automation and process improvements using GitHub Actions, Codefresh, Python, and Bash to reduce manual operational effort.}
+        \item {Worked cross-functionally with engineering teams to support application deployments and improve internal developer platform usability.}
+      \end{cvitems}
+    }
 
 %---------------------------------------------------------
 \end{cventries}
