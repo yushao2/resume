@@ -1,11 +1,10 @@
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
+% SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Work Experience}
-
+\cvsection{Experience}
 
 %-------------------------------------------------------------------------------
-%	CONTENT
+% CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
 
@@ -17,56 +16,25 @@
     {May 2026 -- Present}
     {
       \begin{cvitems}
-        \item {Built an internal \texttt{kubectl} authentication plugin that discovers and connects to EKS clusters without requiring engineers to maintain multiple AWS profiles or invoke \texttt{eksctl}, simplifying access across environments.}
-        \item {Re-architected Kubernetes delivery around Argo CD's app-of-apps pattern, replacing pipeline-driven \texttt{kubectl apply} workflows and introducing a catalogue of reusable system-application bundles for consistent GitOps delivery across clusters.}
-        \item {Developed a pull-request preview tool that fully renders Helm output for base and head revisions, diffs the resulting Kubernetes resources, and posts plan-style reports back to the PR for safer and more informed reviews.}
-        \item {Modernized core engineering infrastructure by upgrading Jenkins from a two-year-old release to the latest LTS version and expanding Grafana dashboard coverage for operational visibility.}
-        \item {Delivered a Kubernetes-backed TeamCity agent proof of concept to make consumption of a fixed CI license pool dynamic; progressed it into a pilot with low-risk projects and worked with stakeholders on adoption and feedback.}
+        \item {Built an internal \texttt{kubectl} authentication plugin that discovers and connects to EKS clusters, replacing the need to maintain multiple AWS profiles or invoke \texttt{eksctl}.}
+        \item {Re-architected Kubernetes delivery around Argo CD's app-of-apps pattern, replacing pipeline-driven \texttt{kubectl apply} and standardizing raw system manifests into catalogued, reusable bundles across clusters.}
+        \item {Developed a pull-request preview tool that deep-renders Helm on base and head revisions, diffs the resulting Kubernetes resources, and comments a plan-style report back on the PR.}
+        \item {Modernized engineering infrastructure by upgrading Jenkins to the latest LTS release, expanding Grafana coverage, and piloting Kubernetes-backed TeamCity agents to use a fixed license pool dynamically.}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {Systems Specialist -- Platform Application Services (Schedulers \& Orchestrators)}
+    {Systems Specialist -- Platform Application Services}
     {Squarepoint Capital}
     {Singapore}
-    {Mar. 2025 -- May 2026}
+    {Aug. 2022 -- May 2026}
     {
       \begin{cvitems}
-        \item {Owned and evolved an existing Kubernetes-based self-service application delivery platform built on Argo CD, with a focus on scalability, reliability, and day-2 operations.}
-        \item {Identified and resolved performance bottlenecks in Kubernetes control-plane and policy components including etcd and Kyverno, improving cluster stability and deployment reliability under production workloads.}
-        \item {Led application migrations from legacy Kubernetes clusters to a newer platform, adapting workloads to updated deployment models and standards while ensuring smooth cutover with minimal disruption.}
-        \item {Designed and deployed an internal AI application frontend using OpenWebUI and Keycloak OIDC, working with security and senior stakeholders to address data-governance, egress, usability, and adoption requirements.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Systems Specialist -- Platform Application Services (Developer Tools / Platforms)}
-    {Squarepoint Capital}
-    {Singapore}
-    {Feb. 2023 -- Mar. 2025}
-    {
-      \begin{cvitems}
-        \item {Led a full lifecycle migration of a business-critical on-prem GitLab platform from CentOS 7 to Rocky Linux 9, including OS hardening, configuration management redesign (Chef $\rightarrow$ Ansible), and low-risk cutover planning.}
-        \item {Extended and adapted open-source GitLab Ansible collections for enterprise on-prem use cases, contributing missing features and fixes back to upstream repositories.}
-        \item {Designed and implemented custom Terraform providers in Go to manage internal platforms via REST APIs, enabling consistent and auditable infrastructure provisioning through Infrastructure as Code.}
-        \item {Managed hybrid cloud infrastructure across AWS and GCP using Terraform, supporting shared platform services and application workloads.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Software Developer (DevOps)}
-    {Squarepoint Capital}
-    {Singapore}
-    {Aug. 2022 -- Feb. 2023}
-    {
-      \begin{cvitems}
-        \item {Maintained and enhanced CI/CD pipelines, shared libraries, and templates across GitLab CI and Bamboo to standardize build and deployment workflows.}
-        \item {Developed internal tooling, including a server-side Git hook dispatcher for hosted GitLab in Python, to enforce workflow and security requirements.}
-        \item {Led a large-scale refactoring of Terraform repositories to reduce duplication, improve maintainability, and enforce consistent module patterns.}
-        \item {Implemented reusable and compliant Terraform modules to enforce cloud security and governance requirements across teams.}
+        \item {Progressed through DevOps and platform roles, owning a Kubernetes self-service delivery platform, resolving etcd and Kyverno bottlenecks, and migrating workloads to newer clusters.}
+        \item {Led the migration of a business-critical on-prem GitLab platform from CentOS 7 to Rocky Linux 9, redesigning configuration management from Chef to Ansible and contributing fixes upstream.}
+        \item {Built Terraform providers in Go for internal REST APIs and managed AWS and GCP infrastructure as code, improving consistency and auditability across platform services.}
+        \item {Standardized CI/CD and cloud governance through GitLab CI and Bamboo libraries, Python Git tooling, Terraform repository refactoring, and reusable compliant modules.}
       \end{cvitems}
     }
 
@@ -78,9 +46,10 @@
     {Jun. 2021 -- Aug. 2022}
     {
       \begin{cvitems}
-        \item {Deployed and managed cloud infrastructure on AWS using Infrastructure-as-Code tools including Terraform and Terragrunt.}
-        \item {Implemented CI/CD automation and process improvements using GitHub Actions, Codefresh, Python, and Bash to reduce manual operational effort.}
+        \item {Provisioned AWS infrastructure with Terraform and Terragrunt and automated CI/CD using GitHub Actions, Codefresh, Python, and Bash.}
       \end{cvitems}
     }
 
+%---------------------------------------------------------
 \end{cventries}
+\vspace{-1.5mm}
