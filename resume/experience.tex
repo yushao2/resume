@@ -16,10 +16,11 @@
     {May 2026 -- Present}
     {
       \begin{cvitems}
-        \item {Built an internal \texttt{kubectl} authentication plugin that discovers and connects to EKS clusters, replacing the need to maintain multiple AWS profiles or invoke \texttt{eksctl}.}
+        \item {Built an internal \texttt{kubectl} authentication plugin that discovers and connects to EKS clusters, eliminating the need to maintain multiple AWS profiles or invoke \texttt{eksctl}.}
         \item {Re-architected Kubernetes delivery around Argo CD's app-of-apps pattern, replacing pipeline-driven \texttt{kubectl apply} and standardizing raw system manifests into catalogued, reusable bundles across clusters.}
         \item {Developed a pull-request preview tool that deep-renders Helm on base and head revisions, diffs the resulting Kubernetes resources, and comments a plan-style report back on the PR.}
-        \item {Modernized engineering infrastructure by upgrading Jenkins to the latest LTS release, expanding Grafana coverage, and piloting Kubernetes-backed TeamCity agents to use a fixed license pool dynamically.}
+        \item {Upgraded Jenkins from a two-year-old release to the latest LTS version, producing backup, rollback, and validation runbooks for a controlled cutover.}
+        \item {Expanded Grafana dashboard coverage and delivered a Kubernetes-backed TeamCity agent proof of concept now in pilot, allowing build capacity to scale dynamically against a fixed license pool.}
       \end{cvitems}
     }
 
@@ -31,10 +32,11 @@
     {Aug. 2022 -- May 2026}
     {
       \begin{cvitems}
-        \item {Progressed through DevOps and platform roles, owning a Kubernetes self-service delivery platform, resolving etcd and Kyverno bottlenecks, and migrating workloads to newer clusters.}
+        \item {Progressed through DevOps and platform roles, owning an Argo CD-based Kubernetes self-service delivery platform, resolving etcd and Kyverno bottlenecks, and migrating workloads to newer clusters.}
         \item {Led the migration of a business-critical on-prem GitLab platform from CentOS 7 to Rocky Linux 9, redesigning configuration management from Chef to Ansible and contributing fixes upstream.}
         \item {Built Terraform providers in Go for internal REST APIs and managed AWS and GCP infrastructure as code, improving consistency and auditability across platform services.}
         \item {Standardized CI/CD and cloud governance through GitLab CI and Bamboo libraries, Python Git tooling, Terraform repository refactoring, and reusable compliant modules.}
+        \item {Designed and deployed an internal AI frontend using OpenWebUI, integrating Keycloak OIDC and working with security stakeholders on data-governance and egress controls.}
       \end{cvitems}
     }
 
@@ -44,12 +46,8 @@
     {GovTech Singapore}
     {Singapore}
     {Jun. 2021 -- Aug. 2022}
-    {
-      \begin{cvitems}
-        \item {Provisioned AWS infrastructure with Terraform and Terragrunt and automated CI/CD using GitHub Actions, Codefresh, Python, and Bash.}
-      \end{cvitems}
-    }
+    {Provisioned AWS infrastructure with Terraform and Terragrunt and automated CI/CD using GitHub Actions, Codefresh, Python, and Bash.}
 
 %---------------------------------------------------------
 \end{cventries}
-\vspace{-1.5mm}
+\vspace{1.0mm}
