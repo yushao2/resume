@@ -1,109 +1,54 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 % Awesome CV LaTeX Template for CV/Resume
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
-
 
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[10pt, a4paper]{awesome-cv}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+% Compact margins while preserving comfortable line length.
+\geometry{left=1.25cm, top=.45cm, right=1.25cm, bottom=.55cm, footskip=.3cm}
 
-% Specify the location of the included fonts
+% Specify the location of the included fonts.
 \fontdir[fonts/]
 
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
+% Restrained monochrome presentation.
 \colorlet{awesome}{awesome-darknight}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
-
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
-
-% Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\hspace{0.8em}\textbar\hspace{0.8em}}
 
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
+\hypersetup{
+  pdftitle={Yu Shao Pang - Resume},
+  pdfauthor={Yu Shao Pang},
+  pdfsubject={Platform and DevOps Engineering}
+}
 
 %-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
+% PERSONAL INFORMATION
 %-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-%\photo[rectangle,noedge,right]{4.jpg}
 \name{Yu Shao}{Pang}
-\position{DevOps Engineer}
+\position{Platform \& DevOps Engineer}
 
 \mobile{(+65) 8310 8770}
 \email{p.yushao2@gmail.com}
-% \homepage{www.posquit0.com}
-% \github{posquit0}
+\github{yushao2}
 \linkedin{yushaopang}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \medium{madium-id}
-% \googlescholar{googlescholar-id}{name-to-display}
-%% \firstname and \lastname will be used
-% \googlescholar{googlescholar-id}{}
-% \extrainfo{extra informations}
-
-% \quote{``Be the change that you want to see in the world."}
-
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[C]
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Yu Shao Pang~~~·~~~Résumé}
-  {\thepage}
-
+% No footer: it consumes valuable space and the date quickly becomes stale.
 
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
+% RESUME CONTENT
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
 \input{resume/experience.tex}
-% \input{resume/honors.tex}
-% \input{resume/presentation.tex}
-% \input{resume/writing.tex}
-% \input{resume/committees.tex}
-\input{resume/education.tex}
-%\input{resume/extracurricular.tex}
 \input{resume/skills.tex}
-
+\input{resume/education.tex}
 
 %-------------------------------------------------------------------------------
 \end{document}
