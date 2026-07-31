@@ -10,17 +10,17 @@
 
 %---------------------------------------------------------
   \cventry
-    {DevOps Engineer}
+    {DevOps Engineer -- Platform Engineering}
     {Capula Investment Management}
     {Singapore}
     {May 2026 -- Present}
     {
       \begin{cvitems}
-        \item {Built an internal \texttt{kubectl} authentication plugin that discovers and connects to EKS clusters, eliminating the need to maintain multiple AWS profiles or invoke \texttt{eksctl}.}
-        \item {Re-architected Kubernetes delivery around Argo CD's app-of-apps pattern, replacing pipeline-driven \texttt{kubectl apply} and standardizing raw system manifests into catalogued, reusable bundles across clusters.}
-        \item {Developed a pull-request preview tool that deep-renders Helm on base and head revisions, diffs the resulting Kubernetes resources, and comments a plan-style report back on the PR.}
-        \item {Upgraded Jenkins from a two-year-old release to the latest LTS version, producing backup, rollback, and validation runbooks for a controlled cutover.}
-        \item {Expanded Grafana dashboard coverage and delivered a Kubernetes-backed TeamCity agent proof of concept now in pilot, allowing build capacity to scale dynamically against a fixed license pool.}
+        \item {Upgraded both production Jenkins controllers from 2.462.3/Java 17 to 2.555.3/JDK 25 in four change-controlled waves over 38 days; validated compatibility across 159 plugins and authored the reusable backup, rollback and verification runbook.}
+        \item {Shipped a versioned Argo CD cluster-services Helm engine replacing per-cluster copy-paste manifests, removing 136 duplicate files and reducing cluster onboarding to one config entry plus one root Application.}
+        \item {Built a Go-based render-diff tool for GitOps pull requests; rolled it out to 18 repositories across 3 projects, retired a 1,116-line Bash predecessor and caught otherwise silent configuration defects.}
+        \item {Proved ephemeral TeamCity agents on EKS against a 33,000-test build, replacing fixed-fleet sizing with licensed concurrency and automated agent cleanup.}
+        \item {Built \texttt{kubectl-login}, a dependency-free Go plugin consolidating AWS SSO and EKS kubeconfig setup into one command; promoted it into the team project and shipped it fleet-wide through RPM/Yum.}
       \end{cvitems}
     }
 
@@ -32,9 +32,9 @@
     {Aug. 2022 -- May 2026}
     {
       \begin{cvitems}
-        \item {Owned and evolved an existing Kubernetes-based self-service application delivery platform built on Argo CD, with a focus on scalability, reliability, and day-2 operations.}
-        \item {Identified and resolved performance bottlenecks in Kubernetes control-plane and policy components including etcd and Kyverno, improving cluster stability and deployment reliability under production workloads.}
-        \item {Led application migrations from legacy Kubernetes clusters to a newer platform, adapting workloads to updated deployment models and standards while ensuring smooth cutover with minimal disruption.}
+        \item {Owned and evolved an Argo CD-based Kubernetes self-service delivery platform, resolving etcd and Kyverno bottlenecks and leading workload migrations from legacy clusters to the new platform.}
+        \item {Led the migration of a business-critical on-premises GitLab platform from CentOS 7 to Rocky Linux 9, replacing Chef with Ansible and contributing fixes upstream.}
+        \item {Built Go Terraform providers for internal REST APIs and standardized cloud delivery across AWS and GCP through reusable Terraform modules, CI/CD libraries and Python automation.}
       \end{cvitems}
     }
 
@@ -44,7 +44,11 @@
     {GovTech Singapore}
     {Singapore}
     {Jun. 2021 -- Aug. 2022}
-    {Provisioned AWS infrastructure with Terraform and Terragrunt and automated CI/CD using GitHub Actions, Codefresh, Python, and Bash.}
+    {
+      \begin{cvitems}
+        \item {Provisioned AWS infrastructure with Terraform and Terragrunt and automated CI/CD through GitHub Actions and Codefresh, supported by Python and Bash tooling.}
+      \end{cvitems}
+    }
 
 %---------------------------------------------------------
 \end{cventries}
