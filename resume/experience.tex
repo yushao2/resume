@@ -16,25 +16,39 @@
     {May 2026 -- Present}
     {
       \begin{cvitems}
-        \item {Upgraded both production Jenkins controllers from 2.462.3/Java 17 to 2.555.3/JDK 25 in four change-controlled waves over 38 days; validated compatibility across 159 plugins and authored the reusable backup, rollback and verification runbook.}
+        \item {Upgraded both production Jenkins controllers from Java 17 to JDK 25 across four change-controlled waves, validating compatibility across 159 plugins and authoring the reusable backup, rollback and verification runbook.}
         \item {Shipped a versioned Argo CD cluster-services Helm engine replacing per-cluster copy-paste manifests, removing 136 duplicate files and reducing cluster onboarding to one config entry plus one root Application.}
         \item {Built a Go-based render-diff tool for GitOps pull requests; rolled it out to 18 repositories across 3 projects, retired a 1,116-line Bash predecessor and caught otherwise silent configuration defects.}
         \item {Proved ephemeral TeamCity agents on EKS against a 33,000-test build, replacing fixed-fleet sizing with licensed concurrency and automated agent cleanup.}
+        \item {Improved reliability across 12 EKS clusters by correcting 11 Kubernetes alert rules, establishing CI/CD dashboards-as-code, auditing live-state drift and resolving APAC-hours incidents involving ingress admission, NLB connectivity and storage exhaustion.}
         \item {Built \texttt{kubectl-login}, a dependency-free Go plugin consolidating AWS SSO and EKS kubeconfig setup into one command; promoted it into the team project and shipped it fleet-wide through RPM/Yum.}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {Systems Specialist -- Platform Application Services}
+    {Systems Specialist -- Platform Application Services (Schedulers \& Orchestrators)}
     {Squarepoint Capital}
     {Singapore}
-    {Aug. 2022 -- May 2026}
+    {Mar. 2025 -- May 2026}
     {
       \begin{cvitems}
-        \item {Owned and evolved an Argo CD-based Kubernetes self-service delivery platform, resolving etcd and Kyverno bottlenecks and leading workload migrations from legacy clusters to the new platform.}
-        \item {Led the migration of a business-critical on-premises GitLab platform from CentOS 7 to Rocky Linux 9, replacing Chef with Ansible and contributing fixes upstream.}
-        \item {Built Go Terraform providers for internal REST APIs and standardized cloud delivery across AWS and GCP through reusable Terraform modules, CI/CD libraries and Python automation.}
+        \item {Owned and evolved an Argo CD-based Kubernetes self-service application delivery platform, resolving etcd and Kyverno bottlenecks and leading workload migrations from legacy clusters to the newer platform.}
+        \item {Designed and deployed an internal AI frontend using OpenWebUI and Keycloak OIDC, working with security and senior stakeholders to address data-governance, egress and adoption concerns before rollout.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Systems Specialist / Software Developer -- Developer Platforms}
+    {}
+    {}
+    {Aug. 2022 -- Mar. 2025}
+    {
+      \begin{cvitems}
+        \item {Led the migration of a business-critical on-premises GitLab platform from CentOS 7 to Rocky Linux 9, replacing Chef with Ansible, planning a low-risk cutover and contributing missing features and fixes upstream.}
+        \item {Built custom Terraform providers in Go for internal REST APIs and managed shared platform infrastructure across AWS and GCP, improving provisioning consistency and auditability.}
+        \item {Standardised CI/CD and cloud governance through GitLab CI and Bamboo libraries, Python Git tooling, Terraform repository refactoring and reusable compliant modules.}
       \end{cvitems}
     }
 
@@ -46,10 +60,11 @@
     {Jun. 2021 -- Aug. 2022}
     {
       \begin{cvitems}
-        \item {Provisioned AWS infrastructure with Terraform and Terragrunt and automated CI/CD through GitHub Actions and Codefresh, supported by Python and Bash tooling.}
+        \item {Provisioned and operated AWS infrastructure using Terraform and Terragrunt.}
+        \item {Automated CI/CD and operational workflows through GitHub Actions, Codefresh, Python and Bash, reducing manual effort for application teams.}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
 \end{cventries}
-\vspace{1.0mm}
+\vspace{0.5mm}
