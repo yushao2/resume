@@ -49,18 +49,20 @@
 
 \newcommand{\companyrole}[4]{%
   \needspace{3.5\baselineskip}%
-  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{3.6cm}@{}}
-    {\fontsize{10.5pt}{12pt}\selectfont\bfseries #1} & {\fontsize{8.8pt}{10pt}\selectfont\color{muted} #2} \\
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr@{}}
+    {\fontsize{10.5pt}{12pt}\selectfont\bfseries #1} & {\fontsize{8.8pt}{10pt}\selectfont\color{muted} #2} \\[-1.5pt]
     {\fontsize{9.4pt}{11pt}\selectfont\bfseries\color{accent} #3} & {\fontsize{8.8pt}{10pt}\selectfont\color{muted} #4}
-  \end{tabularx}%
-  \vspace{-3.5pt}%
+  \end{tabular*}%
+  \vspace{-4.0pt}%
 }
 
+\newcommand{\companygap}{\par\vspace{6.0pt}}
+
 \newcommand{\subrole}[2]{%
-  \vspace{2.2pt}%
-  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{3.6cm}@{}}
+  \vspace{2.0pt}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr@{}}
     {\fontsize{9.1pt}{10.5pt}\selectfont\bfseries #1} & {\fontsize{8.5pt}{10pt}\selectfont\color{muted} #2}
-  \end{tabularx}%
+  \end{tabular*}%
   \vspace{-4.5pt}%
 }
 
