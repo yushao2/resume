@@ -1,22 +1,15 @@
-.PHONY: examples
+TEX := resume.tex
+PDF := resume.pdf
+LOG := resume.log
 
-CC = xelatex
-EXAMPLES_DIR = examples
-RESUME_DIR = examples/resume
-CV_DIR = examples/cv
-RESUME_SRCS = $(shell find $(RESUME_DIR) -name '*.tex')
-CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
+.PHONY: build verify clean
 
-examples: $(foreach x, coverletter cv resume, $x.pdf)
+build:
+	latexmk -lualatex -file-line-error -halt-on-error -interaction=nonstopmode $(TEX)
 
-resume.pdf: $(EXAMPLES_DIR)/resume.tex $(RESUME_SRCS)
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
-
-cv.pdf: $(EXAMPLES_DIR)/cv.tex $(CV_SRCS)
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
-
-coverletter.pdf: $(EXAMPLES_DIR)/coverletter.tex
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
+verify: build
+	bash scripts/verify-pdf.sh $(PDF) $(LOG)
 
 clean:
-	rm -rf $(EXAMPLES_DIR)/*.pdf
+	latexmk -C $(TEX)
+	rm -f $(PDF)
