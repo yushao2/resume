@@ -1,34 +1,13 @@
-# Yu Shao Pang — Platform Engineer Resume
+# Résumé source moved
 
-[![Resume CI](https://github.com/yushao2/resume/actions/workflows/ci.yml/badge.svg)](https://github.com/yushao2/resume/actions/workflows/ci.yml)
-[![PDF](https://img.shields.io/badge/resume-PDF-244A5A)](https://github.com/yushao2/resume/blob/deployments/resume.pdf)
+This repository is retained only for historical reference.
 
-Source for my one-page Platform Engineer resume, written in LaTeX and published automatically after validation.
+The canonical source for Yu Shao Pang's résumé and portfolio now lives in [`yushao2/yushao2.github.io`](https://github.com/yushao2/yushao2.github.io).
 
-## Build locally
+One structured content file—[`content/resume.json`](https://github.com/yushao2/yushao2.github.io/blob/master/content/resume.json)—generates every public output:
 
-Requirements:
+- Portfolio: https://yushao2.github.io
+- Browser résumé: https://yushao2.github.io/resume/
+- PDF résumé: https://yushao2.github.io/resume.pdf
 
-- TeX Live with LuaLaTeX and `latexmk`
-- `poppler-utils` for `pdfinfo` and `pdftotext`
-
-```bash
-make verify
-```
-
-`make verify` compiles the resume and checks that the result is a non-empty, one-page A4 PDF with extractable text and no LaTeX overfull-box warnings.
-
-```bash
-make clean
-```
-
-## CI/CD
-
-The GitHub Actions workflow:
-
-1. Builds and validates the PDF for pull requests and relevant pushes.
-2. Uploads the validated PDF as a workflow artifact.
-3. Deploys that exact artifact to the orphan `deployments` branch only after a successful build on `master`.
-4. Uses least-privilege job permissions, path filtering, timeouts and concurrency cancellation.
-
-Dependabot checks the GitHub Actions dependencies monthly.
+The previous LaTeX and Awesome CV implementation remains available in this repository's Git history, but it is no longer maintained.
