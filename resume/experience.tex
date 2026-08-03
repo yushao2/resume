@@ -1,70 +1,36 @@
-%-------------------------------------------------------------------------------
-% SECTION TITLE
-%-------------------------------------------------------------------------------
-\cvsection{Experience}
+\resumesection{Experience}
 
-%-------------------------------------------------------------------------------
-% CONTENT
-%-------------------------------------------------------------------------------
-\begin{cventries}
+\companyrole{Capula Investment Management}{Singapore}{DevOps Engineer (Platform Engineering)}{May 2026 -- Present}
+\begin{itemize}
+  \item Shipped a versioned Argo CD and Helm cluster-services platform that replaced per-cluster copied manifests, removed 136 duplicate files and reduced new-cluster onboarding to one declarative configuration entry.
+  \item Built a Go render-diff tool for GitOps pull requests, adopted across 18 repositories in three projects; replaced a 1,116-line Bash predecessor and caught configuration defects before merge.
+  \item Modernised build infrastructure by upgrading two production Jenkins controllers across four controlled waves, validating 159 plugins, and proving ephemeral TeamCity agents on EKS against a 33,000-test workload.
+  \item Restored observability across 12 EKS clusters by repairing 11 faulty Kubernetes alerts and introducing CI/CD dashboards-as-code; diagnosed and resolved a fleet-wide ingress admission failure within 101 minutes.
+  \item Built and shipped \texttt{kubectl-login}, a dependency-free Go plugin that consolidated AWS SSO and EKS configuration into one command and was promoted from a personal prototype into the team-supported toolchain.
+\end{itemize}
 
-%---------------------------------------------------------
-  \cventry
-    {DevOps Engineer -- Platform Engineering}
-    {Capula Investment Management}
-    {Singapore}
-    {May 2026 -- Present}
-    {
-      \begin{cvitems}
-        \item {Upgraded both production Jenkins controllers from Java 17 to JDK 25 across four change-controlled waves, validating compatibility across 159 plugins and authoring the reusable backup, rollback and verification runbook.}
-        \item {Shipped a versioned Argo CD cluster-services Helm engine replacing per-cluster copy-paste manifests, removing 136 duplicate files and reducing cluster onboarding to one config entry plus one root Application.}
-        \item {Built a Go-based render-diff tool for GitOps pull requests; rolled it out to 18 repositories across 3 projects, retired a 1,116-line Bash predecessor and caught otherwise silent configuration defects.}
-        \item {Proved ephemeral TeamCity agents on EKS against a 33,000-test build, replacing fixed-fleet sizing with licensed concurrency and automated agent cleanup.}
-        \item {Improved reliability across 12 EKS clusters by correcting 11 Kubernetes alert rules, establishing CI/CD dashboards-as-code, auditing live-state drift and resolving APAC-hours incidents involving ingress admission, NLB connectivity and storage exhaustion.}
-        \item {Built \texttt{kubectl-login}, a dependency-free Go plugin consolidating AWS SSO and EKS kubeconfig setup into one command; promoted it into the team project and shipped it fleet-wide through RPM/Yum.}
-      \end{cvitems}
-    }
+\vspace{1.5pt}
+\companyrole{Squarepoint Capital}{Singapore}{Systems Specialist / Software Developer (DevOps)}{Aug. 2022 -- May 2026}
 
-%---------------------------------------------------------
-  \cventry
-    {Systems Specialist -- Platform Application Services (Schedulers \& Orchestrators)}
-    {Squarepoint Capital}
-    {Singapore}
-    {Mar. 2025 -- May 2026}
-    {
-      \begin{cvitems}
-        \item {Owned and evolved an Argo CD-based Kubernetes self-service application delivery platform, resolving etcd and Kyverno bottlenecks and leading workload migrations from legacy clusters to the newer platform.}
-        \item {Designed and deployed an internal AI frontend using OpenWebUI and Keycloak OIDC, working with security and senior stakeholders to address data-governance, egress and adoption concerns before rollout.}
-      \end{cvitems}
-    }
+\subrole{Systems Specialist -- Schedulers \& Orchestrators}{Mar. 2025 -- May 2026}
+\begin{itemize}
+  \item Owned and evolved an Argo CD-based Kubernetes self-service delivery platform, resolving etcd and Kyverno bottlenecks and leading workload migrations from legacy clusters to the newer platform.
+  \item Supported critical infrastructure in an on-call rotation, leading incident response, root-cause analysis and durable remediation through automation and platform improvements.
+\end{itemize}
 
-%---------------------------------------------------------
-  \cventry
-    {Systems Specialist / Software Developer -- Developer Platforms}
-    {}
-    {}
-    {Aug. 2022 -- Mar. 2025}
-    {
-      \begin{cvitems}
-        \item {Led the migration of a business-critical on-premises GitLab platform from CentOS 7 to Rocky Linux 9, replacing Chef with Ansible, planning a low-risk cutover and contributing missing features and fixes upstream.}
-        \item {Built custom Terraform providers in Go for internal REST APIs and managed shared platform infrastructure across AWS and GCP, improving provisioning consistency and auditability.}
-        \item {Standardised CI/CD and cloud governance through GitLab CI and Bamboo libraries, Python Git tooling, Terraform repository refactoring and reusable compliant modules.}
-      \end{cvitems}
-    }
+\subrole{Systems Specialist -- Developer Platforms}{Feb. 2023 -- Mar. 2025}
+\begin{itemize}
+  \item Led the migration of a business-critical on-premises GitLab platform from CentOS 7 to Rocky Linux 9, replacing Chef with Ansible, planning a low-risk cutover and contributing missing features and fixes upstream.
+  \item Built custom Terraform providers in Go for internal REST APIs and managed shared platform infrastructure across AWS and GCP, improving provisioning consistency and auditability.
+\end{itemize}
 
-%---------------------------------------------------------
-  \cventry
-    {Associate DevOps Engineer}
-    {GovTech Singapore}
-    {Singapore}
-    {Jun. 2021 -- Aug. 2022}
-    {
-      \begin{cvitems}
-        \item {Provisioned and operated AWS infrastructure using Terraform and Terragrunt.}
-        \item {Automated CI/CD and operational workflows through GitHub Actions, Codefresh, Python and Bash, reducing manual effort for application teams.}
-      \end{cvitems}
-    }
+\subrole{Software Developer (DevOps)}{Aug. 2022 -- Feb. 2023}
+\begin{itemize}
+  \item Standardised CI/CD and cloud governance through GitLab CI and Bamboo libraries, Python Git tooling, Terraform repository refactoring and reusable compliant modules.
+\end{itemize}
 
-%---------------------------------------------------------
-\end{cventries}
-\vspace{0.5mm}
+\vspace{1.5pt}
+\companyrole{GovTech Singapore}{Singapore}{Associate DevOps Engineer}{Jun. 2021 -- Aug. 2022}
+\begin{itemize}
+  \item Provisioned and operated AWS infrastructure with Terraform and Terragrunt, and automated application delivery and operational workflows using GitHub Actions, Codefresh, Python and Bash.
+\end{itemize}
