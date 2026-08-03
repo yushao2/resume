@@ -1,54 +1,93 @@
-%!TEX TS-program = xelatex
+%!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
+\documentclass[10pt,a4paper]{article}
 
-%-------------------------------------------------------------------------------
-% CONFIGURATIONS
-%-------------------------------------------------------------------------------
-\documentclass[10pt, a4paper]{awesome-cv}
+\usepackage[left=1.45cm,right=1.45cm,top=0.85cm,bottom=0.85cm]{geometry}
+\usepackage[default]{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{microtype}
+\usepackage{needspace}
 
-% Balanced margins: compact enough for one page without an overly wide text block.
-\geometry{left=1.35cm, top=.50cm, right=1.35cm, bottom=.60cm, footskip=.3cm}
-
-% Specify the location of the included fonts.
-\fontdir[fonts/]
-
-% Restrained monochrome presentation.
-\colorlet{awesome}{awesome-darknight}
-\setbool{acvSectionColorHighlight}{true}
-\renewcommand{\acvHeaderSocialSep}{\hspace{0.8em}\textbar\hspace{0.8em}}
+\definecolor{accent}{HTML}{244A5A}
+\definecolor{text}{HTML}{20262B}
+\definecolor{muted}{HTML}{5F6B73}
+\definecolor{rule}{HTML}{B7C4C9}
 
 \hypersetup{
-  pdftitle={Yu Shao Pang - Resume},
+  pdftitle={Yu Shao Pang - Platform Engineer Resume},
   pdfauthor={Yu Shao Pang},
-  pdfsubject={Platform Engineering}
+  pdfsubject={Platform Engineering},
+  pdfkeywords={Platform Engineer, DevOps, Kubernetes, EKS, GitOps, Argo CD, Jenkins, TeamCity, Terraform, AWS, Go}
 }
 
-%-------------------------------------------------------------------------------
-% PERSONAL INFORMATION
-%-------------------------------------------------------------------------------
-\name{Yu Shao}{Pang}
-\position{Platform Engineer\\Kubernetes \textperiodcentered{} Developer Platforms \textperiodcentered{} CI/CD \textperiodcentered{} Cloud Infrastructure}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\color{text}
+\renewcommand{\arraystretch}{1.0}
+\setlist[itemize]{
+  leftmargin=1.15em,
+  itemsep=1.6pt,
+  topsep=2.0pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textcolor{accent}{\raisebox{0.15ex}{\scriptsize\textbullet}}
+}
 
-\mobile{(+65) 8310 8770}
-\email{p.yushao2@gmail.com}
-\github{yushao2}
-\linkedin{yushaopang}
+\newcommand{\resumesection}[1]{%
+  \par\vspace{6.5pt}%
+  {\fontsize{12.5pt}{14pt}\selectfont\bfseries\color{accent} #1}\par
+  \vspace{1.5pt}\color{rule}\hrule height 0.55pt\color{text}\vspace{4.0pt}%
+}
 
-%-------------------------------------------------------------------------------
+\newcommand{\companyrole}[4]{%
+  \needspace{3.5\baselineskip}%
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{3.6cm}@{}}
+    {\fontsize{10.5pt}{12pt}\selectfont\bfseries #1} & {\fontsize{8.8pt}{10pt}\selectfont\color{muted} #2} \\
+    {\fontsize{9.4pt}{11pt}\selectfont\bfseries\color{accent} #3} & {\fontsize{8.8pt}{10pt}\selectfont\color{muted} #4}
+  \end{tabularx}%
+  \vspace{-3.5pt}%
+}
+
+\newcommand{\subrole}[2]{%
+  \vspace{2.2pt}%
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{3.6cm}@{}}
+    {\fontsize{9.1pt}{10.5pt}\selectfont\bfseries #1} & {\fontsize{8.5pt}{10pt}\selectfont\color{muted} #2}
+  \end{tabularx}%
+  \vspace{-4.5pt}%
+}
+
+\newcommand{\skillrow}[2]{%
+  {\bfseries #1} & #2 \\
+}
+
 \begin{document}
+\sourcesanspro
+\fontsize{9.5pt}{11.25pt}\selectfont
 
-\makecvheader[C]
+\begin{center}
+  {\fontsize{26pt}{29pt}\selectfont\bfseries Yu Shao Pang}\par
+  \vspace{1.0pt}
+  {\fontsize{11pt}{13pt}\selectfont\bfseries\color{accent} Platform Engineer}\par
+  \vspace{1.0pt}
+  {\fontsize{9pt}{11pt}\selectfont Kubernetes \textbullet{} GitOps \textbullet{} CI/CD \textbullet{} AWS}\par
+  \vspace{4.0pt}
+  {\fontsize{9pt}{10.8pt}\selectfont
+  Singapore \enspace|\enspace (+65) 8310 8770 \enspace|\enspace
+  \href{mailto:p.yushao2@gmail.com}{p.yushao2@gmail.com} \enspace|\enspace
+  \href{https://www.linkedin.com/in/yushaopang}{linkedin.com/in/yushaopang}}
+\end{center}
+\vspace{-2pt}
 
-% No footer: it consumes valuable space and the date quickly becomes stale.
-
-%-------------------------------------------------------------------------------
-% RESUME CONTENT
-%-------------------------------------------------------------------------------
 \input{resume/summary.tex}
 \input{resume/experience.tex}
-\input{resume/education.tex}
 \input{resume/skills.tex}
+\input{resume/education.tex}
 
-%-------------------------------------------------------------------------------
 \end{document}
