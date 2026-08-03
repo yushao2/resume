@@ -1,39 +1,95 @@
-name: Build and deploy resume
+name: Resume CI
 
 on:
+  pull_request:
+    paths:
+      - resume.tex
+      - 'resume/**/*.tex'
+      - Makefile
+      - 'scripts/**'
+      - .github/workflows/ci.yml
   push:
     branches:
       - master
+    paths:
+      - resume.tex
+      - 'resume/**/*.tex'
+      - Makefile
+      - 'scripts/**'
+      - .github/workflows/ci.yml
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: resume-deploy
+  group: resume-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build_and_deploy:
-    name: Build and deploy
-    runs-on: ubuntu-latest
+  build:
+    name: Build and validate PDF
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      artifact-metadata: write
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
-      - name: Compile resume
+      - name: Compile and validate resume
         uses: xu-cheng/latex-action@v4
         with:
           root_file: resume.tex
           latexmk_use_lualatex: true
+          texlive_version: 2026
+          os: debian
+          extra_system_packages: poppler-utils
+          post_compile: bash scripts/verify-pdf.sh resume.pdf resume.log
 
-      - name: Prepare deployment
-        run: |
-          mkdir -p public
-          cp resume.pdf public/resume.pdf
+      - name: Upload compiled PDF
+        uses: actions/upload-artifact@v7
+        with:
+          name: resume-pdf
+          path: resume.pdf
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
 
-      - name: Publish PDF
+  deploy:
+    name: Publish PDF
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      actions: read
+      artifact-metadata: read
+    concurrency:
+      group: resume-deploy
+      cancel-in-progress: true
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Download validated PDF
+        uses: actions/download-artifact@v8
+        with:
+          name: resume-pdf
+          path: public
+
+      - name: Verify deployment input
+        run: test -s public/resume.pdf
+
+      - name: Publish deployment branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
